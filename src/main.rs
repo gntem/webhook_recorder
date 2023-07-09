@@ -55,7 +55,7 @@ async fn main() {
     let mut app = tide::with_state(state);
     app.at("/sandbox")
         .post(|mut req: tide::Request<State>| async move {
-            let url = req.url().to_string();
+            let url = req.host().unwrap().to_string();
             let method = req.method().to_string();
             let body = req.body_string().await?;
             let headers = req
