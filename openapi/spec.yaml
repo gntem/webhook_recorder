@@ -6,9 +6,6 @@ info:
 tags:
   - name: recording
     description: webhook recording
-    externalDocs:
-      description: Find out more about our store
-      url: http://swagger.io
 paths:
   /sandbox:
     post:
