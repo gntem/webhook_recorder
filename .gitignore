@@ -1,0 +1,9 @@
+/target
+postgres-data
+.devbox
+devbox.lock
+debug/
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb

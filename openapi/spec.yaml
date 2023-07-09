@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  description: ""
+  version: 1.0.0
+  title: Webhook recorder
+tags:
+  - name: recording
+    description: webhook recording
+    externalDocs:
+      description: Find out more about our store
+      url: http://swagger.io
+paths:
+  /sandbox:
+    post:
+      tags:
+        - recording
+      summary: Record a webhook
+      description: ""
+      operationId: webhook_recording
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Recording"
+
+components:
+  schemas:
+    Recording:
+      type: string
+      description: Recording of a webhook
+      example: 'OK'
